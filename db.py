@@ -23,10 +23,10 @@ class Achivement(Base):
     achivement_title = Column(TEXT)
     achivement_description = Column(TEXT)
     achivement_xtimes = Column(INTEGER)
-    achivement_progress_current = Column(INTEGER)
-    achivement_progress_end = Column(INTEGER)
-    achivement_done = Column(BOOLEAN)
-    achivement_tag = Column(TEXT)
+    #achivement_progress_current = Column(INTEGER)
+    #achivement_progress_end = Column(INTEGER)
+    #achivement_done = Column(BOOLEAN)
+    #achivement_tag = Column(TEXT)
 
 
 def drop_all():

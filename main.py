@@ -23,17 +23,16 @@ application_settings = {"debug": True,
 class HomePageHandler(tornado.web.RequestHandler):
     def get(self):
         session = Session()
-        achivements = []
 
         try:
             achivements = session.query(Achivement)
+
+            self.render("templates/home.html",
+                    achivements = achivements)
         except:
             raise
 
         session.close()
-
-        self.render("templates/home.html",
-                    achivements = achivements)
 
 
 class NewAchivementPageHandler(tornado.web.RequestHandler):

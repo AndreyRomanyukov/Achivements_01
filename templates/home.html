@@ -12,9 +12,23 @@
 </head>
 <body>
     <div class="wrapper">
-        {% if len(achivements) != 0 %}
+        {% if achivements != 0 %}
              {% for achivement in achivements %}
-                 <div>{{achivement.achivement_title}}</li>
+                 <table>
+                     <tr>
+                         <th rowspan="2">
+                             IMAGE
+                         </th>
+                         <th>
+                             {{achivement.achivement_title}}
+                         </th>
+                     </tr>
+                     <tr>
+                         <th>
+                             {{achivement.achivement_description}}
+                         </th>
+                     </tr>
+                 </table>
              {% end %}
         {% else %}
             <div>No achivements added yet</div>
